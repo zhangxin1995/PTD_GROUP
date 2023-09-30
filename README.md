@@ -7,20 +7,16 @@ Person Group Trajectory Dataset(PGTD) comes from paper `People Group Detection w
 
 Fig. 1:The spatial distribution of the cameras in the Person Group Trajectory Dataset. For each camera, the satellite enlarged image and the camera view of the corresponding cameras are displayed. Different colored line segments represent different single-camera tracklets.
 
-![Figure1](https://github.com/zhangxin1995/PGTD/blob/main/images/location.jpg)
+![Figure1](https://github.com/zhangxin1995/PTD_GROUP/blob/8a3827420bc3a10856604f08a98b3e314f590517/images/location.png)
 
 Fig. 2:(A) (B) (C) (D) and (E) represent the trajectories extracted by the CCRF. The time below the picture indicates the earliest occurrence of the corresponding track.
 
-![Figure2](https://github.com/zhangxin1995/PGTD/blob/main/images/Figure19.jpg)
+![Figure2](https://github.com/zhangxin1995/PTD_GROUP/blob/8a3827420bc3a10856604f08a98b3e314f590517/images/example.png)
 
 Fig. 3: The diagram of the group detection framework, the trajectory retrieval process, and the cyclic conditional random field method (CCRF) proposed in this paper.
-![Figure3](https://github.com/zhangxin1995/PGTD/blob/main/images/Figure19.jpg)
+![Figure3](https://github.com/zhangxin1995/PTD_GROUP/blob/8a3827420bc3a10856604f08a98b3e314f590517/images/framework.png)
 
 ## Person Group Trajectory Dataset
-You can download this dataset through the following link: 
-[Dataset](https://drive.google.com/file/d/1-o-CZsyc1IN94bPosgrNyQJhP8GLxtrL/view?usp=sharing)
-
-[Spatial-Temporal Model](https://drive.google.com/file/d/1-o-CZsyc1IN94bPosgrNyQJhP8GLxtrL/view?usp=sharing)
 
 You can load the dataset through the following code:
 ```python
@@ -60,8 +56,10 @@ The dataset are represented by a `dict`, and each of them has the following mean
 
 
 ## Code
-Please put the downloaded data file in the `data/PTD` directory under the code root directory. And execute the following statement:
+Please put the downloaded code file and execute the following statement:
 ```
+git clone https://github.com/zhangxin1995/PTD_GROUP
+cd code
 python main.py --yaml ./config/global_crf_resnet.yaml
 ```
 
