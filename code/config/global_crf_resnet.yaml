@@ -1,0 +1,55 @@
+method: global_CRF
+dataset:
+    path: ./data/PTD/resnet50_visual_dataset.pkl
+    pos_dataset: ./data/PTD/group_dataset.pkl
+    group_dataset: ./data/PTD/g2.pkl
+st_rerank: 
+  enable: False
+rerank:
+  enable: False
+  k1: 1
+  k2: 2
+  lambda: 0.8
+adj2path: rnmf
+dim: 2048
+spatiotemporal:
+    modelroot: ./model/PTD/
+    locationroot: ./data/PTD/location.json
+    name: super_MLP
+cluster_threshold: 0.036
+crf:
+    alpha1: 0.8
+    alpha2: 0.2
+    T: 1
+    T1: 1
+    T2: 1
+    u11: 0.6
+    u12: 0.2
+    u21: 0.3 
+    u22: 0.3
+    threshold: 0.03
+    nc_threshold1: 0.1
+    nc_threshold2: 0.1
+    b1: 0.3 
+    b2: 0
+    above_threshold1: 0.1
+    above_threshold2: 0.1
+    t1: 0.16
+    u4: 0.13
+
+group_detection:
+  u1: 1.2
+  u2: 0.03
+  eta: 1.5
+  topk: 1
+  threshold1: 0.037
+  threshold2: 25
+  max_d: 70
+  max_diff: 100
+
+    
+
+  
+
+
+  

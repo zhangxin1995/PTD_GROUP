@@ -1,0 +1,32 @@
+method: fcluster
+dataset:
+    path: ./data/PTD/resnet50_visual_dataset.pkl
+    pos_dataset: ./data/PTD/group_dataset.pkl
+    group_dataset: ./data/PTD/g2.pkl
+st_rerank: 
+  enable: False
+rerank:
+  enable: False
+  k1: 1
+  k2: 2
+  lambda: 0.8
+adj2path: rnmf
+dim: 2048
+spatiotemporal:
+    modelroot: ./model/PTD/
+    locationroot: ./data/PTD/location.json
+    name: super_MLP
+fcluster:
+  cluster_threshold: 0.04
+group_detection:
+  u1: 1.2
+  u2: 0.03
+  eta: 1.5
+  topk: 1
+  threshold1: 0.037
+  threshold2: 32
+  max_d: 70
+  max_diff: 100
+
+
+  
